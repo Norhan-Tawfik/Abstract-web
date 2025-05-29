@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract</title>
+    <style>
+        :root{
+            --primary-color:#4255d3;
+            --secondary-color:#dadbf1;
+            --black:#000000;
+            --white:#ffffff;
+        }
+        body{
+            margin:  0;
+            padding: 0;
+        }
+        .header{
+                display: flex;
+                position: relative;
+                background-color: var(--black);
+                justify-content: space-between;
+                margin:0 auto;
+                height: 95px;
+        }
+        .left_d_header{
+            display: flex;
+            width: 30%;
+            padding-left: 99px;
+            align-items: center;
+        }
+        .left_d_header img{
+                width: 137px;
+                height: 42px;
+                padding-right: 5px;
+        }
+        .left_d_header h3{
+                color: var(--white);
+                padding-left: 14px;
+                border-left: 2px solid;
+                font-size: 23px;  
+                font-family: 'GT America Standard';  
+        }
+        .right_d_header{
+                display: flex;
+                gap: 10px;
+                padding: 21px 105px;
+                width: 44%;
+        }
+        .right_d_header input{
+                border-radius: 7px;
+                padding: 1rem .8rem;
+                font-weight: 400;
+                background-color: var(--white);
+                font-size: 19px;
+        }
+        .submit-butt{
+                font-size: 24px;
+                width: 18em;
+                background-color: var(--black);
+                color: var(--white);
+                border: 1px solid var(--white);
+                border-radius: 13px;
+                padding: 0.2rem;
+                margin-left: .5rem;
+        } 
+        .sign-butt{
+                font-size: 23px;
+                width: 41%;
+                padding: 0;
+                color: var(--white);
+                background-color: var(--primary-color);
+                border: none;
+                border-radius: 12px;
+                margin-left: .5rem
+        }
+        .hero-sec{
+                background-color: var(--secondary-color);
+                display: flex;
+                flex-direction: column;
+                /* height: 23rem; */
+                align-items: center;
+                padding-top: 110px;
+                padding-bottom: 115px;
+                gap: 18px;
+        }
+        .title{
+                font-family: 'GT America Standard', sans-serif;
+                font-size: 75px;
+                font-weight: 400;
+                letter-spacing: 1px;
+        }
+        .hero-sec input{
+                width: 45rem;
+                font-size: 20px;
+                padding-left: .8em;
+                height: 4rem;
+                border: 1px solid var(--black);
+                border-radius: 5px;
+        }
+        .d-grid{
+            display: grid;
+        }
+        .d-grid:has(.d-grid){
+            row-gap: 30px;
+            padding: 6rem 10rem;
+        }
+        
+        /* .d-grid:not(:has(.d-grid)){
+            border: 1px solid black;
+        }
+        .d-grid:not(.card){
+            border: 1px solid red;
+        }
+        .d-grid.g-col.card .card-img{
+            
+        } */
+
+
+
+        .g-col{
+            grid-template-columns: 1fr 1fr;
+        }
+        .card-img{
+            display: flex;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            justify-content: end;
+            align-items: center;
+            width: fit-content;
+            /*padding-left: 17rem;*/
+        }
+        .card-img img{
+            width: 92px;
+            height: 83px;
+        }
+        .card-content{
+            width: 75%;
+        }
+        .card-h4{
+            font-size: 30px;
+            margin: 0;
+            line-height: 1;
+        }
+        .card-content p{
+            font-size: 24px;
+        }
+        .card-content a{
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .footer{
+            background-color: var(--black);
+            display: flex;
+            height: 20rem;
+            justify-content: center;
+            gap: 163px;
+            padding: 40px 80px;
+        }
+        .footer div{
+                display: flex;
+                flex-direction: column;
+                color: white;
+                font-family: 'GT America Standard', sans-serif;
+                font-size: 20px;
+        }
+        .footer a{
+            text-decoration: none;
+            color: var(--white);
+            line-height: 30px;
+            font-size: 15px;
+        }
+        .footer .last_div{
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+        }
+        .card{
+            grid-template-columns: 1fr 3fr;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="left_d_header">
+                <img src="logo.PNG" alt="">
+                <h3>Help Center</h3>
+            </div>
+            <div class="right_d_header">
+                <input type="search" placeholder="Search">
+                <button class="submit-butt">Submit a request</button>
+                <button class="sign-butt">Sign in</button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="hero-sec">
+                <div class="title">How can we help?</div>
+                <input type="search" placeholder="Search">
+            </div>
+            <div class="d-grid g-col">
+                <div class="d-grid g-col card">
+                    <div class="card-img">
+                        <img src="card1-img.png">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-h4">Using Abstract</h4>
+                        <p>
+                            Abstract lets you manage, version, 
+                            and document your designs in one place.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="d-grid g-col card">
+                    <div class="card-img">
+                        <img src="card2-img.png">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-h4">Manage your account</h4>
+                        <p>
+                            Abstract lets you manage, version, 
+                            and document your designs in one place.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="d-grid g-col card">
+                    <div class="card-img">
+                        <img src="card3-img.png">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-h4">Manage organizations, teams, and projects</h4>
+                        <p>
+                            Abstract lets you manage, version, 
+                            and document your designs in one place.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="d-grid g-col card">
+                    <div class="card-img">
+                        <img src="card4-img.png">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-h4">Manage billing</h4>
+                        <p>
+                            Abstract lets you manage, version, 
+                            and document your designs in one place.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="d-grid g-col card">
+                    <div class="card-img">
+                        <img src="card5-img.png">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-h4">Authenticate to Abstract</h4>
+                        <p>
+                            Abstract lets you manage, version, 
+                            and document your designs in one place.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+                <div class="d-grid g-col card">
+                    <div class="card-img">
+                        <img src="card6-img.png">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="card-h4">Abstract support</h4>
+                        <p>
+                            Abstract lets you manage, version, 
+                            and document your designs in one place.
+                        </p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div>
+            <h3>Abstract</h3>
+            <a href="#">Start Trial</a>
+            <a href="#">Pricing</a>
+            <a href="#">Download</a>
+        </div>
+        <div>
+            <h3>Resources</h3>
+            <a href="#">Blog</a>
+            <a href="#">Help Center</a>
+            <a href="#">Release Notes</a>
+            <a href="#">Status</a>
+        </div>
+        <div>
+            <h3>Community</h3>
+            <a href="#">Twitter</a>
+            <a href="">LinkedIn</a>
+            <a href="">Facebook</a>
+            <a href="">Dribbble</a>
+            <a href="">Podcast</a>
+        </div>
+        <div>
+            <h3>Company</h3>
+            <a href="">About Us</a>
+            <a href="">Careers</a>
+            <a href="">Legal</a>
+            <a href="">Contact Us</a>
+            <a href="">info@goabstract.com</a>
+        </div>
+        <div class="last_div">
+            <img src="logo.PNG" alt="" style="width: 130px;">
+            <p>
+                © Copyright 2025
+                Abstract Studio Design, Inc.
+                All rights reserved
+            </p>
+        </div>
+    </div>   
+</body>
+</html>
